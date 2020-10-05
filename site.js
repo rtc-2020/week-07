@@ -10,7 +10,7 @@ if ('mediaDevices' in navigator) {
       .then(function(stream) {
         var camera_video = document.querySelector('#camera');
         camera_video.srcObject = stream;
-        global_stream = steam;
+        global_stream = stream;
       })
       .catch(function(error) {
         console.error('Stream error:', error);
