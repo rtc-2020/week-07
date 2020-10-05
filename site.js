@@ -17,6 +17,18 @@ if ('mediaDevices' in navigator) {
       });
   });
 
+  var desktop_button = document.querySelector('#share-desktop');
+  desktop_button.addEventListener('click', function(e) {
+    navigator.mediaDevices.getDisplayMedia()
+      .then(function(stream) {
+        var desktop_video = document.querySelector('#desktop');
+        desktop_video.srcObject = stream;
+        // global_stream = stream;
+      })
+      .catch(function(error) {
+        console.error('Stream error:', error);
+      });
+  });
 
   function showDevices() {
     navigator.mediaDevices.enumerateDevices()
