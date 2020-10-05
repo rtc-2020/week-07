@@ -21,3 +21,14 @@ video {
   width: 90%;
   background: #DDD;
 }
+
+.streams {
+  position: relative;
+}
+#camera {
+  position: absolute;
+  width: 30%;
+  top: 30px;
+  right: 30px;
+  filter: grayscale();
+}
