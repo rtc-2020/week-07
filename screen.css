@@ -13,4 +13,11 @@ img,
 video {
   display: block;
   max-width: 100%;
+  border: 1px solid black;
+}
+
+#content {
+  margin: 25px auto;
+  width: 90%;
+  background: #DDD;
 }
